@@ -4,7 +4,7 @@ function CourseRoutes(app) {
     // Get route that parses the id of course as a path parameter and responds with the corresponding
     // course in the Database's courses array.
     // If the course is not available a status code of 404 is sent back along with a short message in the response.
-    // If a course is found, it is sent in the response.
+    // If a course is found it is sent in the response.
     app.get("/api/courses/:id", (req, res) => {
         const { id } = req.params;
         const course = Database.courses.find((c) => c._id === id);
